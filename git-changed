@@ -28,13 +28,6 @@ fi
 if [ -z "$author" ]; then
   author=$(git config --get user.email)
 fi
-if [ "$PERIOD" == "help" ]; then
-  echo "git chagned [period] shows your commit statistics for a period."
-  echo "Default period is since midnight."
-  echo "You can use any value that fits git log --since=''."
-  echo "Check approxidate library for more details https://github.com/thatguystone/approxidate/blob/master/approxidate.c"
-  exit 0
-fi
 echo "Changes summary since ${since} for ${author}"
 git log --stat --no-merges --author $author --since="$since" | awk -F',' '/files? changed/ {
   files += $1
