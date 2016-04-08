@@ -1,5 +1,8 @@
 #!/bin/bash
-if [ -f /usr/local/etc/git-changed.conf ];then source pom.xml;fi
+if [ -f /usr/local/etc/git-changed.conf ]
+then 
+  source /usr/local/etc/git-changed.conf
+fi
 while [[ $# > 1 ]]
 do
 key="$1"
