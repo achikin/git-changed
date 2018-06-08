@@ -1,8 +1,10 @@
 # git-changed
-simple git plugin to show git changes statistics per user
-###Installation:
+git plugin to show git changes statistics per user
+
+### Installation:
 Copy `git-changed` to your `/usr/local/bin` folder
-###Usage:
+
+### Usage:
 ```
 ~ > git changed --author hacker@gmail.com --since 2.days
 Changes summary since 2.days for hacker@gmail.com
@@ -17,7 +19,7 @@ Without any params ```git changed``` shows statistics since midnight for user, t
 
 
 **--author**    Author's email.
-###Config
+### Config
 You can use /usr/local/etc/git-changed.conf to store default settings for the keys above. Example:
 ```
 ~ > cat /usr/local/etc/git-changed.conf
